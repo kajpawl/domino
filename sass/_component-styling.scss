@@ -1,0 +1,308 @@
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+	font-family: $main-font;
+
+	&::selection {
+		background-color: $primary;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	color: $paragraph;
+	background-color: $background-section;
+	overflow-x: hidden;
+	position: relative;
+}
+
+section {
+	padding-top: 50px;
+	padding-bottom: 65px;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	font-weight: 700;
+}
+
+h1, 
+h2,
+h3,
+h4 {
+	text-transform: uppercase; 
+}
+
+h1 {
+	font-size: 72px;
+	margin: 20px;
+	font-weight: 800;
+}
+
+h2 {
+	font-size: 29px;
+	color: $background-black;
+}
+
+h3 {
+	font-weight: 600;
+	font-size: 13.5px;
+	padding: 12px 0;
+	text-align: center;
+}
+
+h4 {
+	font-size: 16px;
+	padding: 20px 0 7px;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.85em;
+}
+
+#dropdown-button {
+	display: none;
+}
+
+.section-title {
+	padding-top: 2px;
+	padding-bottom: 20px;
+	text-align: center;
+	color: $secondary-color;
+}
+
+.transition {
+	transform: rotate(2deg);
+	background: $background-section;
+	position: absolute;
+	bottom: -35px;
+	left: -100px;
+	right: -100px;
+	height: 70px;
+	max-width: 120vw;
+	z-index: 333;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.section-dark {
+	background-color: $background-black;
+
+	h2 {
+		color: $background-section;
+	}
+}
+
+.btn {
+	display: block;
+	padding: 12px;
+	width: 195px;
+	font-size: 12px;
+	border-radius: 23px;
+	outline: none;
+	transition: .4s;
+	border: 3px solid transparent;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 700;
+	color: $background-section;
+	margin: 30px auto;
+
+	&:hover,
+	&:active {
+		cursor: pointer;
+	}
+}
+
+.btn-primary {
+	background-color: $primary;
+
+	&:hover,
+	&:active {
+		background-color: $primary-hover;
+	}
+}
+
+.btn-reverse {
+	background-color: $background-dark;
+
+	&:hover,
+	&:active {
+		background-color: $primary;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+i {
+	display: inline-block;
+	color: $primary;
+	text-align: center;
+	border-radius: 50%;
+	transition: .4s;
+}
+
+.social-icons {
+	margin: 37px 0 5px;
+	
+	i {
+		color: $background-section;
+		font-size: 16px;
+		line-height: 33px;
+		height: 33px;
+		width: 33px;
+		transition: .3s;
+		display: inline-block;
+		margin: 0 1px;
+		background-color: $light-text;
+		border: none;
+
+		&:hover {
+			background-color: $primary;
+			cursor: pointer;
+		}
+	}
+}
+
+.layer {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .6;
+	transition: .7s;
+}
+
+.corner-button {
+	color: $background-section;
+	font-size: 36px;
+	background-color: $primary;
+	width: 65px;
+	height: 65px;
+	line-height: 62px;
+	z-index: 9999;
+	box-shadow: 0 4px 5px rgba(0,0,0,.25);
+
+	&:hover {
+		background-color: $primary-hover;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 5px rgba(0,0,0,.25);
+	}
+}
+
+#modal-layer {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.7);
+	z-index: 444;
+	display: none;
+	filter: brightness(.4);
+
+	&.active {
+		display: block;
+		animation: handle-modal-opacity .3s forwards;
+	}
+}
+
+#gallery-modal {
+	position: fixed;
+	top: 5vh;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-width: 50vw;
+	max-height: 90vh;
+	background-color: $background-section;
+	z-index: 445;
+	display: none;
+	padding: 45px 60px;
+	padding-bottom: 125px;
+	overflow: hidden;
+	border-radius: 4px;
+
+	&.active {
+		display: block;
+		animation: handle-modal-opacity .5s forwards;
+	}
+
+	.button-wrapper {
+		position: relative;
+
+		.modal-close-button i {
+			right: -35px;
+			top: -28px;
+			position: absolute;
+			font-size: 24px;
+			transition: $transition;
+			color: $background-black;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+
+	.modal-content {
+		height: 100%;
+		width: 100%;
+
+		img {
+			object-fit: contain;
+			max-height: 100%;
+			max-width: 100%;
+
+		}
+
+		.caption {
+			margin-top: 20px;
+
+			h2 {
+				padding-bottom: 5px;
+			}
+		}
+	}
+}
+
+@keyframes handle-modal-opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

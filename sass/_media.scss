@@ -1,0 +1,156 @@
+@media(max-width: 767px) {
+	nav {
+		position: static;
+		text-align: center;
+
+		ul {
+			float: none;
+			padding: 20px;
+
+			li {
+				display: block;
+
+				a {
+					height: 45px;
+					line-height: 45px;
+				}
+			}
+		}
+	}
+
+	header {
+		.hero-container {
+			h1 {
+				font-size: 9vw;
+				line-height: 1.3em;
+			}
+		}
+	}
+
+	#services {
+		.card {
+			border: none;
+			margin-bottom: 45px;
+			&:last-child {
+				border: none;
+			}
+		}
+	}
+
+	#projects {
+		.projects-gallery {
+			.projects-select-bar {
+				height: auto;
+
+				ul li {
+					font-weight: 500;
+
+					&:not(:last-child) {
+						border: none;
+					}
+
+					&::after {
+						border-bottom: none;
+					}
+
+					a {
+						padding: 8px 0;
+						line-height: 38px;
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+
+	#our-team {
+		.card-container {
+			.card {
+				margin-bottom: 60px;
+				padding: 35px 5px;
+			}
+		} 
+	}
+
+	#clients-logos {
+		padding: 38px 0 43px;
+		.logos-container {
+			flex-wrap: wrap;
+
+			a {
+				margin: 7px;
+			}
+		}
+	}
+
+	#prices {
+		.card {
+			margin-bottom: 45px;
+		}
+	}
+
+	#facts {
+		.figures {
+			margin-bottom: 45px;
+
+			.number {
+				font-size: 67px;
+			}
+		}
+	}
+
+	#share {
+		.share-items {
+			.heading {
+				margin-left: 15px;
+			}
+
+			.share {
+				padding: 0;
+			}
+
+			span {
+				line-height: 1.5em;
+			}
+
+			.share-medium {
+				margin-bottom: 5px;
+
+				span {
+					padding-right: 25px;
+					line-height: 32px;
+				}
+			}
+		}
+	}
+
+	#map {
+		height: auto;
+
+		.info-box {
+			height: auto;
+			margin: 0 15px;
+
+			p {
+				max-width: calc(100% - 56px);
+				margin-top: 3px;
+			}
+
+			.info-paragraph:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	footer {
+		.footer-left {
+			padding-top: 30px;
+			padding-right: 2px;
+
+			.bottom-paragraph {
+				position: static;
+				padding-top: 30px;
+			}
+		}
+	}
+}
