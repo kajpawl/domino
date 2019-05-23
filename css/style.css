@@ -673,11 +673,13 @@ template {
 }
 
 *::-moz-selection {
-  background-color: #B98B59;
+  background-color: #2d9681;
+  color: #fff;
 }
 
 *::selection {
-  background-color: #B98B59;
+  background-color: #2d9681;
+  color: #fff;
 }
 
 html {
@@ -804,11 +806,11 @@ p {
 }
 
 .btn-primary {
-  background-color: #B98B59;
+  background-color: #2d9681;
 }
 
 .btn-primary:hover, .btn-primary:active {
-  background-color: #976937;
+  background-color: #247867;
 }
 
 .btn-reverse {
@@ -816,7 +818,7 @@ p {
 }
 
 .btn-reverse:hover, .btn-reverse:active {
-  background-color: #B98B59;
+  background-color: #2d9681;
 }
 
 a {
@@ -833,7 +835,7 @@ img {
 
 i {
   display: inline-block;
-  color: #B98B59;
+  color: #2d9681;
   text-align: center;
   border-radius: 50%;
   transition: .4s;
@@ -857,7 +859,7 @@ i {
 }
 
 .social-icons i:hover {
-  background-color: #B98B59;
+  background-color: #2d9681;
   cursor: pointer;
 }
 
@@ -875,7 +877,7 @@ i {
 .corner-button {
   color: #fff;
   font-size: 36px;
-  background-color: #B98B59;
+  background-color: #2d9681;
   width: 65px;
   height: 65px;
   line-height: 62px;
@@ -884,7 +886,7 @@ i {
 }
 
 .corner-button:hover {
-  background-color: #976937;
+  background-color: #247867;
   transform: translateY(-2px);
   box-shadow: 0 6px 5px rgba(0, 0, 0, 0.25);
 }
@@ -915,7 +917,7 @@ i {
   left: 0;
   right: 0;
   width: 100%;
-  max-width: 50vw;
+  max-width: 48vw;
   max-height: 90vh;
   background-color: #fff;
   z-index: 445;
@@ -945,7 +947,7 @@ i {
 }
 
 #gallery-modal .button-wrapper .modal-close-button i:hover {
-  color: #B98B59;
+  color: #2d9681;
 }
 
 #gallery-modal .modal-content {
@@ -1075,7 +1077,7 @@ i {
 
 #nav-menu ul li a::after {
   content: '';
-  border-bottom: 3px solid #B98B59;
+  border-bottom: 3px solid #2d9681;
   position: absolute;
   bottom: 0;
   left: 2px;
@@ -1084,7 +1086,7 @@ i {
 }
 
 #nav-menu ul li a:hover, #nav-menu ul li a.active {
-  opacity: .65;
+  opacity: .7;
 }
 
 #nav-menu ul li a:hover::after, #nav-menu ul li a.active::after {
@@ -1097,6 +1099,16 @@ header {
   overflow: hidden;
 }
 
+header .bg-perspective-wrapper {
+  perspective: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 header .scroll-background {
   position: absolute;
   top: 0;
@@ -1107,28 +1119,37 @@ header .scroll-background {
   background-image: url(../images/hero-1.jpg);
   background-position: center center;
   background-size: cover;
+  transform: scale(1.02);
 }
 
 header .slogan {
   transform: translateY(calc(55vh - 50% - 55px));
-  max-width: 750px;
+  max-width: 770px;
   float: right;
-  text-align: right;
+  text-align: center;
+  pointer-events: none;
+}
+
+header .slogan .translation-wrapper {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
 }
 
 header .slogan h1 {
   color: #fff;
   line-height: 0.9em;
+  padding-top: 40px;
 }
 
 header .slogan h2 {
   color: #fff;
   font-size: 24px;
-  margin-bottom: 45px;
+  padding-bottom: 30px;
 }
 
 header .slogan b {
-  color: #B98B59;
+  color: #2d9681;
 }
 
 header .btn {
@@ -1148,7 +1169,7 @@ header .btn {
 
 #about i,
 #about a {
-  color: #B98B59;
+  color: #2d9681;
   font-weight: 700;
 }
 
@@ -1194,11 +1215,12 @@ header .btn {
 }
 
 #services .service .service-text a {
-  color: #B98B59;
+  color: #2d9681;
   font-size: 18px;
   font-weight: 700;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 #gallery {
@@ -1251,13 +1273,13 @@ header .btn {
 
 #gallery .gallery-section .image-container .image-wrapper img:hover + .layer,
 #gallery #expanded-gallery .image-container .image-wrapper img:hover + .layer {
-  background-color: #B98B59;
+  background-color: #247867;
 }
 
 #gallery .gallery-section .image-container .image-wrapper img:hover ~ i,
 #gallery #expanded-gallery .image-container .image-wrapper img:hover ~ i {
   opacity: .9;
-  font-size: 48px;
+  font-size: 45px;
 }
 
 #gallery .gallery-section .image-container .image-wrapper i,
@@ -1355,6 +1377,7 @@ header .btn {
 
 #map {
   position: relative;
+  background-color: #F9F9F9;
 }
 
 #map .map-container {
@@ -1413,7 +1436,7 @@ footer {
 }
 
 footer a {
-  display: block;
+  display: inline-block;
   line-height: 120px;
   text-transform: uppercase;
   font-size: 15px;
@@ -1425,12 +1448,12 @@ footer a {
 
 .underline.active, #about a.active, #gallery .active.gallery-button, #gallery .active#show-more-button {
   font-weight: 700;
-  color: #B98B59;
+  color: #2d9681;
 }
 
 .underline::after, #about a::after, #gallery .gallery-button::after, #gallery #show-more-button::after {
   content: '';
-  border-bottom: 1px solid #B98B59;
+  border-bottom: 1px solid #2d9681;
   position: absolute;
   bottom: -8px;
   left: 1px;

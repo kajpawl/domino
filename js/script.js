@@ -5,16 +5,17 @@
 var dropdownMenu = document.getElementById('nav-menu');
 var dropdownIcon = document.getElementById('dropdown-button');
 var menuItems = document.querySelectorAll('#nav-menu li a');
+var menuClasses = dropdownMenu.classList;
 
 dropdownIcon.addEventListener('click', function() {
-	dropdownMenu.classList.toggle('show');
+	menuClasses.toggle('show');
 	overlay.classList.toggle('active');
 });
 
 menuItems.forEach(function(item) {
 	item.addEventListener('click', function() {
-		if (dropdownMenu.classList.contains('show')) {
-			dropdownMenu.classList.remove('show');
+		if (menuClasses.contains('show')) {
+			menuClasses.remove('show');
 		};
 	});
 });
@@ -32,18 +33,36 @@ window.onscroll = function() {
 var fixedNavPosition = dropdownMenu.offsetTop;
 var fixNavbar = function() {
 	if (window.pageYOffset > (fixedNavPosition + 60)) {
-		dropdownMenu.classList.add('fixed');
+		menuClasses.add('fixed');
 	} else {
-		dropdownMenu.classList.remove('fixed');
+		menuClasses.remove('fixed');
 	};
 };
 
 // Hero parralax
 
+var background = document.querySelector('.scroll-background');
 window.addEventListener('scroll', function() {
-	var background = document.querySelector('.scroll-background');
-	background.style.top = (window.pageYOffset * 0.5) + 'px';
+	var SCROLLSPEED = .5;
+	background.style.top = (window.pageYOffset * SCROLLSPEED) + 'px';
 });
+
+// Hero 3d transform
+
+var slogan = document.querySelector('header .slogan .translation-wrapper');
+
+background.addEventListener('mousemove', function(event) {
+	var SLOGAN_X_OFFSET = .013;
+	var SLOGAN_Y_OFFSET = .013;
+	var BG_X_ROTATE = .0013;
+	var BG_Y_ROTATE = .0013;
+	var BG_SCALE = 1.02;
+	var pointerOffsetX = (window.innerWidth * .5) - event.offsetX;
+	var pointerOffsetY = (window.innerHeight * .5) - event.offsetY;
+	slogan.style.transform = 'translate(' + (-pointerOffsetX * SLOGAN_X_OFFSET) + 'px, '+ (-pointerOffsetY * SLOGAN_Y_OFFSET) + 'px)';
+	background.style.transform = 'scale(' + BG_SCALE + ') rotateY(' + (-pointerOffsetX * BG_Y_ROTATE) + 'deg) rotateX(' + (pointerOffsetY * BG_X_ROTATE) + 'deg)';
+});
+
 
 // Section fade-ins
 
@@ -63,30 +82,37 @@ var loadSections = function() {
 var expandGalleryButton = document.getElementById('show-more-button');
 var expandedGallery = document.getElementById('expanded-gallery');
 
-expandGalleryButton.addEventListener('click', function(event) {
-	event.preventDefault();
-	expandedGallery.classList.toggle('active');
-	expandGalleryButton.classList.toggle('arrow-upwards');
+var checkIfGalleryIsExpanded = function() {
 	if (expandedGallery.classList.contains('active')) {
 		expandGalleryButton.innerHTML = 'Zobacz mniej ';
+		expandGalleryButton.classList.add('arrow-upwards');
 		loadImages();
 	} 
 	else {
 		expandGalleryButton.innerHTML = 'Zobacz więcej ';
+		expandGalleryButton.classList.remove('arrow-upwards');
 	};
+};
+
+expandGalleryButton.addEventListener('click', function(event) {
+	event.preventDefault();
+	expandedGallery.classList.toggle('active');
+	checkIfGalleryIsExpanded();
 });
 
 // Gallery fade-ins
 
 var loadImages = function() {
+	var DELAY_TIME = .17;
+	var EXTENDED_GALLERY_LENGTH = 5;
 	var galleryImgWrappers = document.querySelectorAll('.active .image-container');
 	if ((window.pageYOffset + window.innerHeight) > document.getElementById('gallery').offsetTop) {
 		for (var i = 0; (i < galleryImgWrappers.length); i++) {
 			if (expandedGallery.classList.contains('active')) {
-				galleryImgWrappers[i].style.animation = "handle-opacity 1.4s " + ((i - 5) * .17) + "s forwards";
+				galleryImgWrappers[i].style.animation = "handle-opacity 1.4s " + ((i - EXTENDED_GALLERY_LENGTH) * DELAY_TIME) + "s forwards";
 			} else {
-				galleryImgWrappers[i].style.animation = "handle-opacity 1.4s " + (i * .17) + "s forwards";
-			}
+				galleryImgWrappers[i].style.animation = "handle-opacity 1.4s " + (i * DELAY_TIME) + "s forwards";
+			};
 		};
 	};
 };
@@ -95,27 +121,31 @@ var loadImages = function() {
 
 var gallerySwitchButtons = document.querySelectorAll('.gallery-button');
 var gallerySections = document.getElementsByClassName('gallery-section');
+var buttonWrapperStyle = document.querySelector('#gallery .button-wrapper').style;
+
+var removeActiveFromAll = function() {
+	for (var i = 0; i < gallerySwitchButtons.length; i++) {
+		gallerySwitchButtons[i].classList.remove('active');
+		gallerySections[i].classList.remove('active');
+	};
+};
 
 for (let i = 0; i < gallerySwitchButtons.length; i++) {
 	let index = i;
-	gallerySwitchButtons[i].addEventListener('click', function() {
+	gallerySwitchButtons[i].addEventListener('click', function(event) {
 		event.preventDefault();
+		removeActiveFromAll();
 		this.classList.add('active');
 		gallerySections[index].classList.add('active');
+		loadImages();
 
-		for (var i = 0; i < gallerySwitchButtons.length; i++) {
-			if (gallerySwitchButtons[i].classList.contains('active') && gallerySwitchButtons[i] != gallerySwitchButtons[index]) {
-				gallerySwitchButtons[i].classList.remove('active');
-				gallerySections[i].classList.remove('active');
-				loadImages();
-			};
-			if (!gallerySwitchButtons[0].classList.contains('active')) {
-				expandedGallery.classList.remove('active');
-				document.querySelector('#gallery .button-wrapper').style.display = 'none';
-			} else {
-				document.querySelector('#gallery .button-wrapper').style.display = 'block';
-			}
+		if (!gallerySwitchButtons[0].classList.contains('active')) {
+			expandedGallery.classList.remove('active');
+			buttonWrapperStyle.display = 'none';
+		} else {
+			buttonWrapperStyle.display = 'block';
 		};
+		checkIfGalleryIsExpanded();
 	});
 };
 
@@ -126,7 +156,6 @@ var galleryModal = document.getElementById('gallery-modal');
 var galleryModalContent = document.querySelector('#gallery-modal .modal-content')
 var overlay = document.getElementById('modal-layer');
 var modalCloseButton = document.querySelector('.modal-close-button');
-
 
 var showGalleryModal = function() {
 	overlay.classList.add('active');
@@ -147,13 +176,14 @@ var closeGalleryModal = function() {
 };
 
 overlay.addEventListener('click', closeGalleryModal);
-modalCloseButton.addEventListener('click', function() {
+modalCloseButton.addEventListener('click', function(event) {
 	event.preventDefault();
 	closeGalleryModal();
 });
 
 document.onkeydown = function(event) {
-    if (galleryModal.classList.contains('active') && (event.keyCode == 27)) {
+	var ESC_KEY_CODE = 27;
+    if (galleryModal.classList.contains('active') && (event.keyCode == ESC_KEY_CODE)) {
 		closeGalleryModal();
     };
 };
