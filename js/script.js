@@ -2,21 +2,22 @@
 
 // Dropdown mobile menu
 
-var dropdownMenu = document.getElementById('nav-menu');
+var navbarMenu = document.getElementById('nav-menu');
+var dropdownMenu = document.querySelector('#nav-menu ul');
 var dropdownIcon = document.getElementById('dropdown-button');
 var menuItems = document.querySelectorAll('#nav-menu li a');
-var menuClasses = dropdownMenu.classList;
+var dropdownClasses = dropdownMenu.classList;
+var menuClasses = navbarMenu.classList;
 
 dropdownIcon.addEventListener('click', function() {
-	menuClasses.toggle('show');
 	overlay.classList.toggle('active');
+	dropdownClasses.toggle('show');
 });
 
 menuItems.forEach(function(item) {
 	item.addEventListener('click', function() {
-		if (menuClasses.contains('show')) {
-			menuClasses.remove('show');
-		};
+		overlay.classList.toggle('active');
+		dropdownClasses.toggle('show');
 	});
 });
 
@@ -30,9 +31,10 @@ window.onscroll = function() {
 
 // Fixing the navbar
 
-var fixedNavPosition = dropdownMenu.offsetTop;
+var fixedNavPosition = navbarMenu.offsetTop;
 var fixNavbar = function() {
-	if (window.pageYOffset > (fixedNavPosition + 60)) {
+	var NAV_HEIGHT_DIFFERENCE = 60;
+	if (window.pageYOffset > (fixedNavPosition + NAV_HEIGHT_DIFFERENCE)) {
 		menuClasses.add('fixed');
 	} else {
 		menuClasses.remove('fixed');
@@ -183,7 +185,7 @@ modalCloseButton.addEventListener('click', function(event) {
 
 document.onkeydown = function(event) {
 	var ESC_KEY_CODE = 27;
-    if (galleryModal.classList.contains('active') && (event.keyCode == ESC_KEY_CODE)) {
+	if (galleryModal.classList.contains('active') && (event.keyCode == ESC_KEY_CODE)) {
 		closeGalleryModal();
-    };
+	};
 };

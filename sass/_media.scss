@@ -1,156 +1,136 @@
 @media(max-width: 767px) {
-	nav {
-		position: static;
+
+	.overflow-wrapper {
+		overflow-x: hidden;
+	}
+
+	#nav-menu {
+		position: absolute;
 		text-align: center;
 
+		#dropdown-button {
+			display: block;
+			position: fixed;
+			top: 23px;
+			right: 30px;
+			font-size: 24px;
+			font-style: normal;
+			z-index: 999;
+		}
+
+		.logo-container {
+			position: absolute;
+		}
+
 		ul {
+			margin-top: 160px;
+			padding: 15px 0;
 			float: none;
 			padding: 20px;
+			background-color: rgba(0,0,0,.6);
+			max-width: 80vw;
+			display: none;
+			transition: transform $transition;
+			transform: translateX(-120%);
+			z-index: 999;
+			display: block;
+
+			&.show {
+				transform: translateX(0);
+			}
 
 			li {
+				float: none;
 				display: block;
+				height: 55px;
+				line-height: 55px;
 
 				a {
-					height: 45px;
-					line-height: 45px;
+					float: none;
+					display: block;
+				}
+			}
+		}
+
+		&.fixed {
+
+			ul {
+				margin-top: 100px;
+
+				li {
+					height: 55px;
+					line-height: 55px;
 				}
 			}
 		}
 	}
 
 	header {
-		.hero-container {
+	    height: 96vh;
+
+		.slogan {
+			padding: 10px;
+
 			h1 {
-				font-size: 9vw;
-				line-height: 1.3em;
+				font-size: 17vw;
+				line-height: 1.1em;
 			}
+		}
+	}
+
+	#about {
+
+		img {
+			margin-top: 30px;
 		}
 	}
 
 	#services {
-		.card {
-			border: none;
-			margin-bottom: 45px;
-			&:last-child {
-				border: none;
-			}
+
+		.service {
+			padding-top: 30px;
 		}
 	}
 
-	#projects {
-		.projects-gallery {
-			.projects-select-bar {
-				height: auto;
+	#gallery {
 
-				ul li {
-					font-weight: 500;
-
-					&:not(:last-child) {
-						border: none;
-					}
-
-					&::after {
-						border-bottom: none;
-					}
-
-					a {
-						padding: 8px 0;
-						line-height: 38px;
-						font-size: 13px;
-					}
-				}
-			}
+		.image-container {
+			padding: 10px 0;
 		}
 	}
 
-	#our-team {
-		.card-container {
-			.card {
-				margin-bottom: 60px;
-				padding: 35px 5px;
-			}
-		} 
-	}
+	#prizes {
 
-	#clients-logos {
-		padding: 38px 0 43px;
-		.logos-container {
-			flex-wrap: wrap;
-
-			a {
-				margin: 7px;
-			}
-		}
-	}
-
-	#prices {
-		.card {
-			margin-bottom: 45px;
-		}
-	}
-
-	#facts {
-		.figures {
-			margin-bottom: 45px;
-
-			.number {
-				font-size: 67px;
-			}
-		}
-	}
-
-	#share {
-		.share-items {
-			.heading {
-				margin-left: 15px;
-			}
-
-			.share {
-				padding: 0;
-			}
-
-			span {
-				line-height: 1.5em;
-			}
-
-			.share-medium {
-				margin-bottom: 5px;
-
-				span {
-					padding-right: 25px;
-					line-height: 32px;
-				}
-			}
+		.image-container {
+			text-align: center;
 		}
 	}
 
 	#map {
-		height: auto;
 
-		.info-box {
-			height: auto;
-			margin: 0 15px;
+		.map-container {
 
-			p {
-				max-width: calc(100% - 56px);
-				margin-top: 3px;
-			}
-
-			.info-paragraph:not(:last-child) {
-				margin-bottom: 10px;
+			.map-contact {
+				position: static;
 			}
 		}
 	}
 
 	footer {
-		.footer-left {
-			padding-top: 30px;
-			padding-right: 2px;
 
-			.bottom-paragraph {
-				position: static;
-				padding-top: 30px;
-			}
+		.corner-button {
+			left: 45px;
+		}
+	}
+
+	#gallery-modal {
+		max-width: 90vw;
+		padding: 45px 20px;
+		bottom: auto;
+		overflow-y: scroll;
+
+		.button-wrapper .modal-close-button i {
+			right: 0;
 		}
 	}
 }

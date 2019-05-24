@@ -184,37 +184,41 @@ header {
 #about {
 	position: relative;
 
-	p {
-		padding: 20px 0;
-	}
+	.text-container {
+		padding-top: 5px;		
 
-	i,
-	a {
-		color: $primary;
-		font-weight: 700;
-
-		&:hover {
-			transform: translateY(-2px);
+		p {
+			padding: 20px 0;
 		}
-	}
 
-	a {
-		@extend .underline;
-
-		i {
-			padding-left: 6px;
-		}
-	}
-
-	.image-container {
-
-		img {
-			box-shadow: 2px 2px 15px 0 rgba(0,0,0,.5);
-			transition: $transition;
+		i,
+		a {
+			color: $primary;
+			font-weight: 700;
 
 			&:hover {
 				transform: translateY(-2px);
-				box-shadow: 2px 4px 15px 0 rgba(0,0,0,.7);
+			}
+		}
+
+		a {
+			@extend .underline;
+
+			i {
+				padding-left: 6px;
+			}
+		}
+
+		.image-container {
+
+			img {
+				box-shadow: 2px 2px 15px 0 rgba(0,0,0,.5);
+				transition: $transition;
+
+				&:hover {
+					transform: translateY(-2px);
+					box-shadow: 2px 4px 15px 0 rgba(0,0,0,.7);
+				}
 			}
 		}
 	}
@@ -228,6 +232,7 @@ header {
 #services {
 
 	.service {
+		padding-bottom: 30px;
 
 		&:hover {
 			.service-icon i {
@@ -463,6 +468,13 @@ footer {
 	background-color: $background-black;
 	text-align: right;
 	box-shadow: 0 0 8px #000;
+	position: relative;
+
+	.corner-button {
+		position: absolute;
+		top: -33px;
+		left: 75px;
+	}
 
 	a {
 		display: inline-block;
