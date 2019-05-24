@@ -693,6 +693,10 @@ body {
   position: relative;
 }
 
+.overflow-wrapper {
+  overflow-x: hidden;
+}
+
 section {
   padding-top: 50px;
   padding-bottom: 65px;
@@ -1506,9 +1510,6 @@ footer a {
 }
 
 @media (max-width: 767px) {
-  .overflow-wrapper {
-    overflow-x: hidden;
-  }
   #nav-menu {
     position: absolute;
     text-align: center;

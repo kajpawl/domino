@@ -14,10 +14,13 @@ dropdownIcon.addEventListener('click', function() {
 	dropdownClasses.toggle('show');
 });
 
+
 menuItems.forEach(function(item) {
 	item.addEventListener('click', function() {
-		overlay.classList.toggle('active');
-		dropdownClasses.toggle('show');
+		if (dropdownClasses.contains('show')) {
+			overlay.classList.remove('active');
+			dropdownClasses.remove('show');
+		};
 	});
 });
 
