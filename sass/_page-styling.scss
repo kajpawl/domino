@@ -179,6 +179,13 @@ header {
 		right: 0;
 	}
 
+	.corner-button {
+		position: fixed;
+		bottom: -75px;
+		right: 50px;
+		z-index: 349;
+		animation: button-movement .8s 1.7s forwards;
+	}
 }
 
 #about {
@@ -236,15 +243,22 @@ header {
 
 		&:hover {
 			.service-icon i {
-				font-size: 56px;
+				// font-size: 56px;
+				transform: scale(1.1);
 			}
 		}
 
 		.service-icon {
-			padding: 20px 0 0;
+			padding: 15px 0;
+			text-align: center;
 
 			i {
 				font-size: 52px;
+				width: 86px;
+				height: 86px;
+				line-height: 86px;
+				// padding: 20px;
+				// border: 1px solid $primary;
 			}
 		}
 
@@ -252,13 +266,18 @@ header {
 			padding-left: 0;
 			padding-right: 0;
 
-			a {
+			h4 {
 				color: $primary;
 				font-size: 18px;
 				font-weight: 700;
-				padding-bottom: 10px;
-				display: inline-block;
+				padding-bottom: 15px;
+				display: block;
 				text-transform: uppercase;
+				text-align: center;
+			}
+
+			ul {
+				text-align: center;
 			}
 		}
 	}
@@ -405,6 +424,46 @@ header {
 			transform: scale(1.015);
 		}
 	}
+
+	// .section-title {
+	// 	padding-bottom: 25px;
+	// }
+
+	.text-container {
+
+		h3 {
+			text-align: left;
+			padding-top: 0;
+			padding-bottom: 22px;
+			font-size: 29px;
+			color: $background-section;
+		}
+
+		ul {
+
+			li {
+				margin-left: 45px;
+
+				b {
+					margin-left: -45px;
+					display: inline-block;
+				}
+
+				span {
+					color: $background-section;
+				}
+			}
+		}
+
+		.btn {
+			margin-top: 38px;
+			margin-bottom: 25px;
+		}
+	}
+
+	.image-container {
+		margin-top: 32px;
+	}
 }
 
 #map {
@@ -534,5 +593,23 @@ footer {
 	to {
 		opacity: 1;
 		transform: translate(0, 0);
+	}
+}
+
+@keyframes button-movement {
+	from {
+		bottom: -75px;
+	}
+	to {
+		bottom: 45px;
+	}
+}
+
+@keyframes button-movement-mobile {
+	from {
+		bottom: -75px;
+	}
+	to {
+		bottom: 32px;
 	}
 }

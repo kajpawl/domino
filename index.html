@@ -10,6 +10,8 @@
 	</head>
 	<body>
 		<div class="overflow-wrapper">
+			<div id="fb-root"></div>
+			<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.3"></script>
 			<header class="section-dark" id="home">
 				<div class="bg-perspective-wrapper">
 					<div class="scroll-background"></div>
@@ -42,13 +44,14 @@
 					</div>
 				</div>
 				<div class="transition col-sm-12 col-md-12"></div>
+				<a href="tel:535235102"><i class="fas fa-phone corner-button"></i></a>
 			</header>
 			<section id="about">
 				<div class="container">
 					<div class="row text-left text-container">
 						<div class="col-sm-12 col-md-7">
 							<h2>Stylizacje są moją pasją</h2>
-							<p>Moja przygoda z fryzjerskim fachem rozpoczęła się  w 2007 roku. Po ukończeniu Akademii Zdrowia w Łodzi zacząłem zdobywać doświadczenie zawodowe. Rok póżniej rozpocząłem pracę w salonach Matrixa. Z powodzeniem ukończyłem kurs kreatywnej koloryzacji. Udział w Łódzkim Fashion Week pozwolił mi zdobyć nowe doświadczenia. Czesałem dla najlepszych. Natasza Pavluczenko, Agatha Ruiz De La Prada czy duet Paprocki & Brzozowski - ikony były zachwycone efektami mojej pracy. Dzięki współpracy markami Kerastese Paris oraz L'Oreal Paris zyskiwałem praktykę. Brałem również udział w wielu sesjach modelingowych zyskując tym samym miano eksperta.</p>
+							<p>Moja przygoda z fryzjerskim fachem rozpoczęła się  w 2007 roku. Po ukończeniu Akademii Zdrowia w Łodzi zacząłem zdobywać doświadczenie zawodowe. Rok póżniej rozpocząłem pracę w salonach Matrixa. Z powodzeniem ukończyłem kurs kreatywnej koloryzacji. Udział w Łódzkim Fashion Week pozwolił mi zdobyć nowe doświadczenia. Czesałem dla najlepszych. Natasza Pavluczenko, Agatha Ruiz De La Prada czy duet Paprocki & Brzozowski - ikony były zachwycone efektami mojej pracy. Brałem również udział w wielu sesjach modelingowych zyskując tym samym miano eksperta. Współpracowałem z markami Kerastese Paris oraz L'Oreal Paris. Obecnie pracuję na produktach firmy Goldwell.</p>
 							<a href="#map">Zapraszam do kontaktu <i class="fas fa-phone"></i></a>
 						</div>
 						<div class="col-md-5 image-container">
@@ -68,58 +71,71 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-12 col-md-4 service">
-							<div class="row">
-								<div class="col-sm-3 col-md-3 service-icon">
-									<i class="fas fa-cut"></i>
-								</div>
-								<div class="col-sm-9 col-md-9 service-text">
-									<a>Strzyżenie</a>
-									<p>Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
-								</div>
+							<div class="service-icon">
+								<i class="fas fa-cut"></i>
+							</div>
+							<div class="service-text">
+								<h4>Strzyżenie włosów</h4>
+								<ul>
+									<li>Strzyżenie damskie</li>
+									<li>Strzyżenie męskie</li>
+									<li>Strzyżenie dziecka</li>
+									<li>Grzywka</li>
+								</ul>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4 service">
-							<div class="row">
-								<div class="col-sm-3 col-md-3 service-icon">
-									<i class="fas fa-paint-brush"></i>
-								</div>
-								<div class="col-sm-9 col-md-9 service-text">
-									<a>Koloryzacja</a>
-									<p>Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
-								</div>
+							<div class="service-icon">
+								<i class="fas fa-paint-brush"></i>
+							</div>
+							<div class="service-text">
+								<h4>Koloryzacja</h4>
+								<ul>
+									<li>Baleyage</li>
+									<li>Ombre i sombre</li>
+									<li>Dekoloryzacja</li>
+									<li>Refleksy</li>
+									<li>Elumen</li>
+									<li>Kolor jednolity z rozjaśnieniem</li>
+									<li>Kolor jednolity bez rozjaśnienia</li>
+								</ul>
 							</div>
 						</div>
+						<div class="col-sm-12 col-md-4 service">
+							<div class="service-icon">
+								<i class="fas fa-magic"></i>
+							</div>
+							<div class="service-text">
+								<h4>Zabiegi pielęgnacyjne</h4>
+								<ul>
+									<li>Ambułka</li>
+									<li>Sauna</li>
+									<li>Regeneracja / nawilżenie / objętość</li>
+									<li>Zabieg keratynowy Kersalik</li>
+									<li>Prostowanie keratynowe</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--<div class="row">
 						<div class="col-sm-12 col-md-4 service">
 							<div class="row">
 								<div class="col-sm-3 col-md-3 service-icon">
 									<i class="fas fa-feather"></i>
 								</div>
 								<div class="col-sm-9 col-md-9 service-text">
-									<a>Modelowanie</a>
+									<h4>Modelowanie</h4>
 									<p>Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="row">
 						<div class="col-sm-12 col-md-4 service">
 							<div class="row">
 								<div class="col-sm-3 col-md-3 service-icon">
 									<i class="fab fa-keybase"></i>
 								</div>
 								<div class="col-sm-9 col-md-9 service-text">
-									<a>Upięcia</a>
-									<p>Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-4 service">
-							<div class="row">
-								<div class="col-sm-3 col-md-3 service-icon">
-									<i class="fas fa-magic"></i>
-								</div>
-								<div class="col-sm-9 col-md-9 service-text">
-									<a>Pielęgnacja</a>
+									<h4>Upięcia</h4>
 									<p>Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
 								</div>
 							</div>
@@ -130,12 +146,12 @@
 									<i class="fas fa-ring"></i>
 								</div>
 								<div class="col-sm-9 col-md-9 service-text">
-									<a>Fryzury okolicznościowe</a>
+									<h4>Fryzury okolicznościowe</h4>
 									<p>Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</section>
 			<section id="gallery">
@@ -156,78 +172,78 @@
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Opis pracy konkursowej - praca wykonana dla (...). Pierwsze miejsce w konkursie</p>" src="images/contest-photo (1).jpg">
+									<img alt="<h2>Goldwell Color Zoom Challenge '18</h2><p>W kategorii Global Creative Colorist</p><p><b>MAKEUP</b>: Magdalena Giszterowicz</p><p><b>PHOTO</b>: Łukasz Malczewski</p><p><b>MODELKA</b>: Yui</p>" src="images/contest-photo (12).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Color Zoom Challenge 2017</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Goldwell Color Zoom Challenge '18</h4>
+									<p>W kategorii Global Creative Colorist</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Color Zoom Challenge 2015 - drugie miejsce w konkursie</p>" src="images/contest-photo (2).jpg">
+									<img alt="<h2>#pasteLOVE - konkurs z.one concept Poland 2018</h2><p><b>Zwycięstwo w konkursie</b>: za oryginalną stylizację i jej profesjonalną sesyjną oprawę, w tym doskonałe światło</p><p><b>MAKEUP</b>: Zuzanna Buczek</p><p><b>PHOTO</b>: Łukasz Malczewski</p><p><b>MODELKA</b>: Monika Mańkowska</p>" src="images/contest-photo (11).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Color Zoom Challenge 2015</h4>
-									<p>Praca zajęła drugie miejsce w konkursie</p>
+									<h4>#pasteLOVE - konkurs z.one concept Poland 2018</h4>
+									<p>I miejsce w konkursie</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Color Zoom Challenge 2016</p>" src="images/contest-photo (3).jpg">
+									<img alt="<h2>Goldwell Color Zoom Challenge '17</h2><p>W kategorii Global Creative Colorist</p><p><b>MAKEUP</b>: Monika Jarzyńska</p><p><b>PHOTO</b>: Łukasz Malczewski</p><p><b>MODELKA</b>: Joanna Łukasik</p>" src="images/contest-photo (10).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Color Zoom Challenge 2016</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Goldwell Color Zoom Challenge '17</h4>
+									<p>W kategorii Global Creative Colorist</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Color Zoom Challenge 2016</p>" src="images/contest-photo (4).jpg">
+									<img alt="<h2>Goldwell Color Zoom Challenge '16</h2><p>W kategorii Global Creative Colorist</p><p><b>MAKEUP</b>: Magdalena Giszterowicz</p><p><b>PHOTO</b>: Łukasz Malczewski</p><p><b>MODELKA</b>: Akylai Abylakdyr</p>" src="images/contest-photo (9).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Color Zoom Challenge 2016</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Goldwell Color Zoom Challenge '16</h4>
+									<p>W kategorii Global Creative Colorist</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Opis pracy konkursowej - praca wykonana dla (...). Pierwsze miejsce w konkursie</p>" src="images/contest-photo (5).jpg">
+									<img alt="<h2>Goldwell Color Zoom Challenge '16</h2><p>W kategorii Global Creative Colorist</p><p><b>MAKEUP</b>: Magdalena Giszterowicz</p><p><b>PHOTO</b>: Łukasz Malczewski</p><p><b>MODELKA</b>: Yui</p>" src="images/contest-photo (8).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Lorem ipsum dolor sit</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Goldwell Color Zoom Challenge '16</h4>
+									<p>W kategorii Global Creative Colorist</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Color Zoom Challenge 2017</p>" src="images/contest-photo (6).jpg">
+									<img alt="<h2>Goldwell Color Zoom Challenge '15</h2><p>II miejsce w kategorii Global Creative Colorist</p><p><b>MAKEUP</b>: Magdalena Giszterowicz</p><p><b>PHOTO</b>: Łukasz Malczewski</p><p><b>MODELKA</b>: Monika Kropat</p>" src="images/contest-photo (7).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Color Zoom Challenge 2017</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Goldwell Color Zoom Challenge '15</h4>
+									<p>II miejsce w kategorii Global Creative Colorist</p>
 								</div>
 							</div>
 						</div>
@@ -236,39 +252,78 @@
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Opis pracy konkursowej - praca wykonana dla (...). Pierwsze miejsce w konkursie</p>" src="images/contest-photo (7).jpg">
+									<img alt="<h2>Fryzjermania 2015 - edycja letnia</h2><p>I miejsce w konkursie Stylista Lata</p>" src="images/contest-photo (6).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Lorem ipsum dolor sit</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Fryzjermania 2015 - edycja letnia</h4>
+									<p>I miejsce w konkursie Stylista Lata</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Opis pracy konkursowej - praca wykonana dla (...). Pierwsze miejsce w konkursie</p>" src="images/contest-photo (8).jpg">
+									<img alt="<h2>Goldwell Color Zoom Challenge '13</h2><p>V miejsce w kategorii Global Creative Colorist</p><p><b>MAKEUP</b>: Magdalena Giszterowicz</p><p><b>PHOTO</b>: Łukasz Malczewski</p><p><b>MODELKA</b>: Monika Kropat</p>" src="images/contest-photo (5).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Lorem ipsum dolor sit</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Goldwell Color Zoom Challenge '13</h4>
+									<p>V miejsce w kategorii Global Creative Colorist</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Opis pracy konkursowej - praca wykonana dla (...). Pierwsze miejsce w konkursie</p>" src="images/contest-photo (9).jpg">
+									<img alt="<h2>Sesja zdjęciowa do projektu „LADY”</h2><p><b>Rok</b>: 2012</p>" src="images/contest-photo (4).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Lorem ipsum dolor sit</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Sesja zdjęciowa do projektu „LADY”</h4>
+									<p>Rok: 2012</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-4">
+							<div class="image-container">
+								<div class="image-wrapper">
+									<img alt="<h2>Praca konkursowa</h2><p><b>Model</b>: Tycjan</p>" src="images/contest-photo (3).jpg">
+									<div class="layer"></div>
+									<i class="fas fa-search"></i>
+								</div>
+								<div class="image-container-info">
+									<h4>Praca konkursowa</h4>
+									<p>Rok: 2016</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-4">
+							<div class="image-container">
+								<div class="image-wrapper">
+									<img alt="<h2>Sesja zdjęciowa do projektu</h2><p><b>Rok</b>: 2018</p>" src="images/contest-photo (2).jpg">
+									<div class="layer"></div>
+									<i class="fas fa-search"></i>
+								</div>
+								<div class="image-container-info">
+									<h4>Sesja zdjęciowa do projektu</h4>
+									<p>Rok: 2018</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-4">
+							<div class="image-container">
+								<div class="image-wrapper">
+									<img alt="<h2>Trandy Hair Revolution 2010</h2><p>II miejsce w Polsce</p>" src="images/contest-photo (1).jpg">
+									<div class="layer"></div>
+									<i class="fas fa-search"></i>
+								</div>
+								<div class="image-container-info">
+									<h4>Trandy Hair Revolution 2010</h4>
+									<p>II miejsce w Polsce</p>
 								</div>
 							</div>
 						</div>
@@ -280,78 +335,78 @@
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Opis pracy konkursowej - praca wykonana dla (...). Pierwsze miejsce w konkursie</p>" src="images/metamorphosis (1).jpg">
+									<img alt="<h2>Metamorfoza</h2><p>Przykładowa metamorfoza by Dominik Garczyński</p>" src="images/metamorphosis (1).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Lorem ipsum dolor sit</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Metamorfoza 1</h4>
+									<p>Przykładowa metamorfoza by Dominik Garczyński</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Opis pracy konkursowej - praca wykonana dla (...). Pierwsze miejsce w konkursie</p>" src="images/metamorphosis (2).jpg">
+									<img alt="<h2>Metamorfoza</h2><p>Przykładowa metamorfoza by Dominik Garczyński</p>" src="images/metamorphosis (2).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Lorem ipsum dolor sit</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Metamorfoza 2</h4>
+									<p>Przykładowa metamorfoza by Dominik Garczyński</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Opis pracy konkursowej - praca wykonana dla (...). Pierwsze miejsce w konkursie</p>" src="images/metamorphosis (3).jpg">
+									<img alt="<h2>Metamorfoza</h2><p>Przykładowa metamorfoza by Dominik Garczyński</p>" src="images/metamorphosis (3).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Lorem ipsum dolor sit</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Metamorfoza 3</h4>
+									<p>Przykładowa metamorfoza by Dominik Garczyński</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Opis pracy konkursowej - praca wykonana dla (...). Pierwsze miejsce w konkursie</p>" src="images/metamorphosis (4).jpg">
+									<img alt="<h2>Metamorfoza</h2><p>Przykładowa metamorfoza by Dominik Garczyński</p>" src="images/metamorphosis (4).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Lorem ipsum dolor sit</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Metamorfoza 4</h4>
+									<p>Przykładowa metamorfoza by Dominik Garczyński</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Opis pracy konkursowej - praca wykonana dla (...). Pierwsze miejsce w konkursie</p>" src="images/metamorphosis (5).jpg">
+									<img alt="<h2>Metamorfoza</h2><p>Przykładowa metamorfoza by Dominik Garczyński</p>" src="images/metamorphosis (5).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Lorem ipsum dolor sit</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Metamorfoza 5</h4>
+									<p>Przykładowa metamorfoza by Dominik Garczyński</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4">
 							<div class="image-container">
 								<div class="image-wrapper">
-									<img alt="<h2>Praca konkursowa</h2><p>Opis pracy konkursowej - praca wykonana dla (...). Pierwsze miejsce w konkursie</p>" src="images/metamorphosis (6).jpg">
+									<img alt="<h2>Metamorfoza</h2><p>Przykładowa metamorfoza by Dominik Garczyński</p>" src="images/metamorphosis (6).jpg">
 									<div class="layer"></div>
 									<i class="fas fa-search"></i>
 								</div>
 								<div class="image-container-info">
-									<h4>Lorem ipsum dolor sit</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et</p>
+									<h4>Metamorfoza 6</h4>
+									<p>Przykładowa metamorfoza by Dominik Garczyński</p>
 								</div>
 							</div>
 						</div>
@@ -371,9 +426,19 @@
 					<div class="row">
 						<div class="col-sm-12 col-md-8">
 							<div class="text-container">
-								<h2>Lorem ipsum dolor</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								<button class="btn btn-primary">Show more</button>
+								<!-- <p>Od roku 2010 aktywnie uczestniczę w konkursach fryzjerskich, a plasowanie się na wysokich miejscach pozwoliło mi na rywalizację z najlepszymi. Moje prace były publikowane w najlepszych pismach branżowych, a sam wystąpiłem w programie telewizyjnym "Łowcy fryzur".</p> -->
+								<h3>Wybrane osiągnięcia</h3>
+								<ul>
+									<li><b>2018</b>: <span>#pasteLOVE - konkurs z.one concept Poland 2018</span> - I miejsce w konkursie<br>
+									<span class="date-padding">Goldwell Color Zoom Challenge '18</span> - kategoria Global Creative Colorist</li>
+									<li><b>2017</b>: <span>Goldwell Color Zoom Challenge '17</span> - kategoria Global Creative Colorist</li>
+									<li><b>2016</b>: <span>Goldwell Color Zoom Challenge '16</span> - kategoria Global Creative Colorist</li>
+									<li><b>2015</b>: <span>Goldwell Color Zoom Challenge '15</span> - II miejsce w kategorii Global Creative Colorist<br>
+									<span class="date-padding">Fryzjermania 2015 - edycja letnia</span> - I miejsce w konkursie</li>
+									<li><b>2013</b>: <span>Goldwell Color Zoom Challenge '13 </span>- V miejsce w kategorii Global Creative Colorist (II miejsce w Polsce)</li>
+									<li><b>2010</b>: <span>Trandy Hair Revolution 2010</span> - II miejsce w Polsce</li>
+								</ul>
+								<a href="#gallery" class="btn btn-primary">Zobacz galerię</a>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-4 image-container">
@@ -417,12 +482,21 @@
 					<a href="https://github.com/kajpawl">© Kajetan Pawliszyn 2019</a>
 				</div>
 			</footer>
+
 			<div id="modal-layer"></div>
 			<div id="gallery-modal">
 				<div class="button-wrapper">
 					<a href="#" class="modal-close-button"><i class="fas fa-times"></i></a>
 				</div>
 				<div class="modal-content"></div>
+			</div>
+			<div class="facebook-plugin">
+				<div class="tab-wrapper">
+					<div class="fb-tab">
+						<img src="images/facebook-logo.png" alt="Facebook logo">
+					</div>
+				</div>
+				<div class="fb-page" data-href="https://www.facebook.com/Dominik-Garczy%C5%84ski-StylistaKolorysta-653952711324002/" data-tabs="timeline" data-width="350" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Dominik-Garczy%C5%84ski-StylistaKolorysta-653952711324002/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Dominik-Garczy%C5%84ski-StylistaKolorysta-653952711324002/">Dominik Garczyński Stylista&amp;Kolorysta.</a></blockquote></div>
 			</div>
 		</div>
 

@@ -13,6 +13,16 @@
 			font-style: normal;
 			z-index: 999;
 		}
+		&.fixed {
+
+			.logo-graphics {
+				transform: translateX(-75px);
+			}
+
+			.logo-text {
+				transform: translate(30px, -30px);
+			}
+		}
 
 		.logo-container {
 			position: absolute;
@@ -72,6 +82,11 @@
 				line-height: 1.1em;
 			}
 		}
+
+		.corner-button {
+			right: 30px;
+			animation: button-movement-mobile .8s 1.6s forwards;
+		}
 	}
 
 	#about {
@@ -88,17 +103,18 @@
 		}
 	}
 
-	#gallery {
+	// #gallery {
 
-		.image-container {
-			padding: 10px 0;
-		}
-	}
+	// 	.image-container {
+	// 		padding: 10px 0;
+	// 	}
+	// }
 
 	#prizes {
 
 		.image-container {
 			text-align: center;
+			margin-top: 0;
 		}
 	}
 
@@ -108,6 +124,7 @@
 
 			.map-contact {
 				position: static;
+			    padding: 45px 35px;
 			}
 		}
 	}
@@ -123,7 +140,6 @@
 		max-width: 90vw;
 		padding: 45px 20px;
 		bottom: auto;
-		overflow-y: scroll;
 
 		.button-wrapper .modal-close-button i {
 			right: 0;

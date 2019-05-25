@@ -55,31 +55,40 @@ window.addEventListener('scroll', function() {
 // Hero 3d transform
 
 var slogan = document.querySelector('header .slogan .translation-wrapper');
+var backgroundListeners = [background, navbarMenu, document.querySelector('header .btn-primary')];
 
-background.addEventListener('mousemove', function(event) {
+var runHeroTransform = function(item) {
 	var SLOGAN_X_OFFSET = .013;
 	var SLOGAN_Y_OFFSET = .013;
 	var BG_X_ROTATE = .0013;
 	var BG_Y_ROTATE = .0013;
 	var BG_SCALE = 1.02;
-	var pointerOffsetX = (window.innerWidth * .5) - event.offsetX;
-	var pointerOffsetY = (window.innerHeight * .5) - event.offsetY;
-	slogan.style.transform = 'translate(' + (-pointerOffsetX * SLOGAN_X_OFFSET) + 'px, '+ (-pointerOffsetY * SLOGAN_Y_OFFSET) + 'px)';
-	background.style.transform = 'scale(' + BG_SCALE + ') rotateY(' + (-pointerOffsetX * BG_Y_ROTATE) + 'deg) rotateX(' + (pointerOffsetY * BG_X_ROTATE) + 'deg)';
-});
 
+	item.addEventListener('mousemove', function(event) {
+		var pointerOffsetX = (window.innerWidth * .5) - event.pageX;
+		var pointerOffsetY = (window.innerHeight * .5) - event.pageY;
+		slogan.style.transform = 'translate(' + (-pointerOffsetX * SLOGAN_X_OFFSET) + 'px, '+ (-pointerOffsetY * SLOGAN_Y_OFFSET) + 'px)';
+		background.style.transform = 'scale(' + BG_SCALE + ') rotateY(' + (-pointerOffsetX * BG_Y_ROTATE) + 'deg) rotateX(' + (pointerOffsetY * BG_X_ROTATE) + 'deg)';
+	});
+};
+
+backgroundListeners.forEach(function(item) {
+	runHeroTransform(item);
+});
 
 // Section fade-ins
 
 var pageSections = document.querySelectorAll('section');
 var loadSections = function() {
-	pageSections.forEach(function(item) {
-		if ((window.pageYOffset + window.innerHeight) > item.offsetTop) {
-			item.classList.add('visible');
-		} else {
-			item.classList.remove('visible');
-		}
-	});
+	if (document.documentElement.clientWidth > 768) {
+		pageSections.forEach(function(item) {
+			if ((window.pageYOffset + window.innerHeight) > item.offsetTop) {
+				item.classList.add('visible');
+			} else {
+				item.classList.remove('visible');
+			}
+		});
+	};
 };
 
 // Expand gallery
@@ -192,3 +201,9 @@ document.onkeydown = function(event) {
 		closeGalleryModal();
 	};
 };
+
+// Expand Facebook plugin
+
+document.querySelector('.facebook-plugin .fb-tab').addEventListener('click', function() {
+	document.querySelector('.facebook-plugin').classList.toggle('active');
+});
