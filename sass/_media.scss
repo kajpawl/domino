@@ -1,7 +1,6 @@
 @media(max-width: 767px) {
 
 	#nav-menu {
-		position: absolute;
 		text-align: center;
 
 		#dropdown-button {
@@ -40,6 +39,7 @@
 			transform: translateX(-120%);
 			z-index: 999;
 			display: block;
+			transition: $transition;
 
 			&.show {
 				transform: translateX(0);
