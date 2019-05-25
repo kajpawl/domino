@@ -103,13 +103,6 @@
 		}
 	}
 
-	// #gallery {
-
-	// 	.image-container {
-	// 		padding: 10px 0;
-	// 	}
-	// }
-
 	#prizes {
 
 		.image-container {
@@ -130,9 +123,14 @@
 	}
 
 	footer {
+		text-align: left;
 
 		.corner-button {
 			left: 45px;
+		}
+
+		.container {
+			padding-left: 30px;
 		}
 	}
 
