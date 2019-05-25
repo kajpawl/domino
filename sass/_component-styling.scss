@@ -327,16 +327,15 @@ i {
 
 .facebook-plugin {
 	position: fixed;
-	left: 0;
+	left: -350px;
 	top: calc(53vh - 250px);
 	z-index: 349;
 	max-width: 350px;
 	width: 100%;
 	transition: .6s;
-	transform: translateX(-350px);
 
 	&.active {
-		transform: translateX(0);
+		transform: translateX(350px);
 	}
 
 	.tab-wrapper {
