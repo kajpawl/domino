@@ -524,6 +524,7 @@ footer {
 	text-align: right;
 	box-shadow: 0 0 8px #000;
 	position: relative;
+	padding: 9px 0;
 
 	.corner-button {
 		position: absolute;
@@ -531,7 +532,7 @@ footer {
 		left: 75px;
 	}
 
-	a {
+	p {
 		display: inline-block;
 		line-height: 120px;
 		text-transform: uppercase;
