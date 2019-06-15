@@ -14,7 +14,6 @@ dropdownIcon.addEventListener('click', function() {
 	dropdownClasses.toggle('show');
 });
 
-
 menuItems.forEach(function(item) {
 	item.addEventListener('click', function() {
 		if (dropdownClasses.contains('show')) {
@@ -23,6 +22,10 @@ menuItems.forEach(function(item) {
 		};
 	});
 });
+
+// Add telephone number to "Call me" button with JS (to avoid bots)
+
+document.getElementById('call-me-button').href = "tel:+48535235102";
 
 // Scrolling functions
 
